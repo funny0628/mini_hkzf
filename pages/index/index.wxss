@@ -1,0 +1,245 @@
+/**index.wxss**/
+.container {
+  height: 100vh;
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+.container .swiper {
+  width: 100%;
+  height: 160px;
+  position: relative;
+}
+
+.container .swiper swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.container .swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.container .swiper .search {
+  width: 90%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  top: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .swiper .search .city {
+  flex: 9;
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.container .swiper .search .city .cityname {
+  flex: 1.5;
+  text-align: center;
+  margin-right: 10rpx;
+  font-size: 30rpx;
+  min-width: 80rpx;
+}
+
+.container .swiper .search .city .icon-sj_bottom {
+  flex: 1;
+  font-size: 12rpx;
+}
+
+.container .swiper .search .city input {
+  flex: 7.5;
+  border-left: 1px solid #ccc;
+  padding-left: 10px;
+  font-size: 30rpx;
+}
+
+.container .swiper .search .ditu {
+  flex: 1;
+  padding: 15rpx 25rpx;
+  box-sizing: border-box;
+}
+
+.container .swiper .search .ditu .border {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container .area {
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+}
+
+.container .area .item {
+  flex: 1;
+  width: 33%;
+}
+
+.container .area .item .image {
+  width: 100%;
+  height: 60%;
+  border-radius: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container .area .item .image .bg {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: #f2fbf7;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .area .item .image text {
+  font-size: 23px;
+  color: #18b574;
+}
+
+.container .area .item .desc {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.container .group {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+
+.container .group .top {
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .group .top .title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.container .group .groups {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container .group .groups .item {
+  width: 49%;
+  height: 80px;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.container .group .groups .item .left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.container .group .groups .item .left .home {
+  font-size: 16px;
+}
+
+.container .group .groups .item .left .feel {
+  font-size: 14px;
+  color: #333;
+}
+
+.container .group .groups .item .right {
+  flex: 1;
+  height: 100%;
+}
+
+.container .group .groups .item .right image {
+  width: 100%;
+  height: 100%;
+}
+
+.container .new {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+.container .new .top {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.container .new .item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 120px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+.container .new .item:last-child{
+  border-bottom: none;
+}
+
+.container .new .item .left {
+  flex: 4;
+}
+.container .new .item .left image{
+    width: 100%;
+    height: 100%;
+}
+
+.container .new .item .right {
+  flex: 5.8;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .new .item .right .desc{
+  font-size: 14px;
+}
+.container .new .item .right .date{
+  font-size: 12px;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+}

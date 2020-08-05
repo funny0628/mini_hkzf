@@ -1,0 +1,11 @@
+<view class="my">
+	<view class="top">
+		<image src="http://huangjiangjun.top:8088/img/profile/bg.png"></image>
+		<view class="myinfo">
+			<image src=""></image>
+			<text>游客</text>
+			<text>去登陆</text>
+		</view>
+	</view>
+
+</view>

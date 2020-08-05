@@ -1,0 +1,121 @@
+<!--index.wxml-->
+<view class="container">
+	<!-- 轮播图 -->
+	<view class="swiper">
+		<swiper indicator-dots autoplay>
+			<block wx:for="{{imagelist}}" wx:key="index">
+				<swiper-item>
+					<image src="{{item}}"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="search">
+			<view class="city">
+				<text class="cityname">北京</text>
+				<text class="iconfont icon-sj_bottom"></text>
+				<input placeholder="最大输入小区或地址" />
+			</view>
+			<view class="ditu">
+				<view class="border">
+					<text class="iconfont icon-ditu1"></text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- tab区域 -->
+	<view class="area">
+		<view wx:for="{{arealist}}" wx:for-item="it" wx:key="index" class="item">
+			<view class="image">
+				<view class="bg">
+					<text class="{{it.clas}}"></text>
+				</view>
+			</view>
+			<text class="desc">{{it.text}}</text>
+		</view>
+	</view>
+  <!-- 租房小组 -->
+  <view class="group">
+    <view class="top">
+      <text class="title">租房小组</text>
+      <text class="more">更多</text>
+    </view>
+    <view class="groups">
+      <view class="item">
+        <view class="left">
+          <text class="home">家住回龙观</text>
+          <text class="feel">归属的感觉</text>
+        </view>
+        <view class="right">
+          <image src="https://hbimg.huabanimg.com/7bcb4d1946c01a2b237a744d3b088d33dde16b134b43f-RS09uS_fw658/format/webp"></image>
+        </view>
+      </view>
+      <view class="item">
+        <view class="left">
+          <text class="home">家住回龙观</text>
+          <text class="feel">归属的感觉</text>
+        </view>
+        <view class="right">
+          <image src="https://hbimg.huabanimg.com/7bcb4d1946c01a2b237a744d3b088d33dde16b134b43f-RS09uS_fw658/format/webp"></image>
+        </view>
+      </view>
+      <view class="item">
+        <view class="left">
+          <text class="home">家住回龙观</text>
+          <text class="feel">归属的感觉</text>
+        </view>
+        <view class="right">
+          <image src="https://hbimg.huabanimg.com/7bcb4d1946c01a2b237a744d3b088d33dde16b134b43f-RS09uS_fw658/format/webp"></image>
+        </view>
+      </view>
+      <view class="item">
+        <view class="left">
+          <text class="home">家住回龙观</text>
+          <text class="feel">归属的感觉</text>
+        </view>
+        <view class="right">
+          <image src="https://hbimg.huabanimg.com/7bcb4d1946c01a2b237a744d3b088d33dde16b134b43f-RS09uS_fw658/format/webp"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 最新资讯 -->
+  <view class="new">
+    <text class="top">最新资讯</text>
+    <view class="item">
+      <view class="left">
+        <image src="https://hbimg.huabanimg.com/60f198516cee4ab511cb190a85599d3e1d88302a4d1ba-iBehXn_fw658/format/webp"></image>
+      </view>
+      <view class="right">
+        <view class="desc">使用 wx:for-item 可以指定数组当前元素的变量名，</view>
+        <view class="date">
+          <text class="name">asddasd</text>
+          <text class="time">adasd</text>
+        </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">
+        <image src="https://hbimg.huabanimg.com/60f198516cee4ab511cb190a85599d3e1d88302a4d1ba-iBehXn_fw658/format/webp"></image>
+      </view>
+      <view class="right">
+        <view class="desc">使用 wx:for-item 可以指定数组当前元素的变量名，</view>
+        <view class="date">
+          <text class="name">asddasd</text>
+          <text class="time">adasd</text>
+        </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">
+        <image src="https://hbimg.huabanimg.com/60f198516cee4ab511cb190a85599d3e1d88302a4d1ba-iBehXn_fw658/format/webp"></image>
+      </view>
+      <view class="right">
+        <view class="desc">使用 wx:for-item 可以指定数组当前元素的变量名，</view>
+        <view class="date">
+          <text class="name">asddasd</text>
+          <text class="time">adasd</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -8,6 +8,10 @@ Page({
     daseUrl:'',
     //轮播图列表
     imagelist: [],
+    //租房小组
+    grouplist:[],
+    //最新资讯
+    newslist:[],
     arealist: [{
         clas: 'iconfont icon-icon-home',
         text: "整租"
@@ -32,10 +36,13 @@ Page({
     this.setData({
       baseUrl:wx.$baseurl
     })
-    this.getdata()
+    this.getswiper();
+    this.getgroup();
+    this.getnews();
   },
 
-  async getdata() {
+  //请求轮播图数据
+  async getswiper() {
     wx.$showToast()
     let {data} = await wx.$http({
       url: '/home/swiper',
@@ -44,6 +51,34 @@ Page({
     if(data.status === 200 && data.description === '请求成功'){
       this.setData({
         imagelist:data.body
+      })
+      wx.$hideToast()
+    }
+  },
+  //请求租房小组数据
+  async getgroup() {
+    wx.$showToast()
+    let {data} = await wx.$http({
+      url: '/home/groups',
+      method: 'GET',
+    })
+    if(data.status === 200 && data.description === '请求成功'){
+      this.setData({
+        grouplist:data.body
+      })
+      wx.$hideToast()
+    }
+  },
+  //请求最新资讯数据
+  async getnews() {
+    wx.$showToast()
+    let {data} = await wx.$http({
+      url: '/home/news',
+      method: 'GET',
+    })
+    if(data.status === 200 && data.description === '请求成功'){
+      this.setData({
+        newslist:data.body
       })
       wx.$hideToast()
     }

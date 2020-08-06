@@ -7,7 +7,7 @@
 			<text class="btn">去登陆</text>
 		</view>
 		<view class="list">
-			<view class="item" wx:for="{{list}}">
+			<view class="item" wx:for="{{list}}" wx:key="index">
 				<text class="{{item.icon}}"></text>
 				<text class="name">{{item.text}}</text>
 			</view>

@@ -1,6 +1,12 @@
 //app.js
+import {Request,showtoast,hidetoast} from './static/request/index.js'
+wx.$http = Request
+wx.$showToast = showtoast
+wx.$hideToast = hidetoast
 App({
+  
   onLaunch: function () {
+    wx.$baseurl = 'http://huangjiangjun.top:8088'
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

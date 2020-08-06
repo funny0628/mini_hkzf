@@ -2,9 +2,18 @@
 	<view class="top">
 		<image src="http://huangjiangjun.top:8088/img/profile/bg.png"></image>
 		<view class="myinfo">
-			<image src=""></image>
-			<text>游客</text>
-			<text>去登陆</text>
+			<image src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></image>
+			<text class="youke">游客</text>
+			<text class="btn">去登陆</text>
+		</view>
+		<view class="list">
+			<view class="item" wx:for="{{list}}">
+				<text class="{{item.icon}}"></text>
+				<text class="name">{{item.text}}</text>
+			</view>
+		</view>
+		<view class="card">
+			<image src="https://images.pexels.com/photos/2734404/pexels-photo-2734404.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></image>
 		</view>
 	</view>
 

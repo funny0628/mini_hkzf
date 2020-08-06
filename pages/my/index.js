@@ -5,7 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list: [
+      {
+        icon:'iconfont icon-shoucang',
+        text:'我的收藏'
+      }, 
+      {
+        icon:'iconfont icon-icon-home',
+        text:'我要出租'
+      }, 
+      {
+        icon:'iconfont icon-jilu',
+        text:'看房记录'
+      }, 
+      {
+        icon:'iconfont icon-card',
+        text:'成为房主'
+      }, 
+      {
+        icon:'iconfont icon-gerenziliao',
+        text:'个人资料'
+      }, 
+      {
+        icon:'iconfont icon-lianxiwomen',
+        text:'联系我们'
+      }, 
+    ]
   },
 
   /**

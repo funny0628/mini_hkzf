@@ -1,13 +1,19 @@
 <view class="login">
   <view class="top">
-    <text class="iconfont icon-fenye-shangyiye"></text>
+    <text bindtap="goback" class="iconfont icon-fenye-shangyiye"></text>
     <text class="title">账号登录</text>
   </view>
-  <view class="list">
-    <input placeholder="请输入用户名"/>
-    <input placeholder="请输入密码"/>
+  <view class="type">
+    <text wx:if="{{activeindex  === '1'}}" bindtap="changeindex" data-index='1' class="'active'">登录</text>
+    <text wx:else bindtap="changeindex" data-index='1' >登录</text>
+    <text wx:if="{{activeindex === '2'}}"  bindtap="changeindex" data-index='2'  class="'active'">注册</text>
+    <text wx:else bindtap="changeindex" data-index='2'>注册</text>
   </view>
-  <view class="btn">
-    <text>登录</text>
+  <view class="list">
+    <input bindinput="inputdata" value='{{username}}' data-value='username' placeholder="请输入用户名"/>
+    <input bindinput="inputdata" value='{{password}}' data-value='password' placeholder="请输入密码"/>
+  </view>
+  <view bindtap="senddata" class="btn">
+    <text >{{activeindex === '1' ? '登录' : '注册'}}</text>
   </view>
 </view>

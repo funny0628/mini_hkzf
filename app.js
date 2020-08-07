@@ -3,6 +3,7 @@ import {Request,showtoast,hidetoast} from './static/request/index.js'
 wx.$http = Request
 wx.$showToast = showtoast
 wx.$hideToast = hidetoast
+wx.$baseurl = 'http://huangjiangjun.top:8088'
 App({
   
   onLaunch: function () {

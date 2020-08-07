@@ -1,10 +1,9 @@
 //index.js
+//获取城市名字
 import {getcityname} from '../../utils/city.js'
 //获取应用实例
 const app = getApp()
-// 引用百度地图微信小程序JSAPI模块 
-let bmap = require('../../libs/bmap-wx.js');
-let local = ''
+
 Page({
   data: {
     //图片基地址
@@ -37,28 +36,6 @@ Page({
     //地图数据
 
   },
-  //事件处理函
-  getcityname() {
-    var BMap = new bmap.BMapWX({
-      ak: 'x6QfgHjg6kdB0trGeIdu67Chzwxl2adT'
-    });
-
-    let success = (data) => {
-      this.setData({
-        cityname: data.currentWeather[0].currentCity
-      })
-      
-    }
-    let fail = function (data) {
-      console.log(data);
-    }
-    BMap.weather({
-      location: local,
-      success: success,
-      fail: fail
-    })
-  },
-
   onLoad: function (options) {
     this.setData({
       baseUrl: wx.$baseurl
@@ -66,23 +43,8 @@ Page({
     this.getswiper();
     this.getgroup();
     this.getnews();
-    //获取当前位置的经纬度
-    // this.getLocation()
     this.setData({
       cityname:getcityname()
-    })
-  },
-
-  //获取当前的的位置
-  getLocation() {
-    let that = this
-    wx.getLocation({
-      type: 'wgs84',
-      success(res) {
-        local = res.longitude + ',' + res.latitude
-        //由当前位置的经纬度获取城市名字
-        // that.getcityname()
-      }
     })
   },
 

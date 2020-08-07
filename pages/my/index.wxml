@@ -1,11 +1,18 @@
 <view class="my">
 	<view class="top">
 		<image src="http://huangjiangjun.top:8088/img/profile/bg.png"></image>
-		<view class="myinfo">
+		<view wx:if="{{isuser}}" class="myinfo">
+			<image src="{{baseurl}}{{userinfo.avatar}}"></image>
+			<text class="youke">{{userinfo.nickname}}</text>
+			<text bindtap="tologinout" class="btn">退出</text>
+			<text class="edit">编辑个人资料</text>
+		</view>
+		<view wx:else  class="myinfo">
 			<image src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></image>
 			<text class="youke">游客</text>
-			<text class="btn">去登陆</text>
+			<text bindtap="tologin" class="btn">去登陆</text>
 		</view>
+
 		<view class="list">
 			<view class="item" wx:for="{{list}}" wx:key="index">
 				<text class="{{item.icon}}"></text>

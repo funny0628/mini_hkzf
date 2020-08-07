@@ -21,6 +21,22 @@
 .login .top .title {
   text-align: center;
 }
+.login .type {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+}
+.login .type text {
+  font-size: 16px;
+  flex: 1;
+  text-align: center;
+}
+.login .type text.active{
+  background-color: #1cb676;
+}
 .login .list {
   width: 100%;
   padding: 0 15px;

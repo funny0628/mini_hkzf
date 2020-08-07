@@ -44,6 +44,10 @@
   font-size: 14px;
   border-radius: 5px;
 }
+.my .top .myinfo .edit{
+  font-size: 13px;
+  margin-top: 10px;
+}
 .my .top .list {
   width: 100%;
   display: flex;

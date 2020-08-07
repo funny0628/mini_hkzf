@@ -3,6 +3,7 @@ import {Request} from '../static/request/index.js'
 let bmap = require('../libs/bmap-wx.js');
 let local = '';
 let city = ""
+export const BASEURL = "http://huangjiangjun.top:8088"
 
 function getname() {
   return wx.getStorageSync('CITY')

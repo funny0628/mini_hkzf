@@ -1,5 +1,13 @@
 <!--index.wxml-->
 <view class="container">
+	<!-- <view class="map_container">
+		<map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+	</view>
+	<view class="rgc_info">
+		<text>{{rgcData.address}}</text>
+		<text>{{rgcData.desc}}</text>
+		<text>{{rgcData.business}}</text>
+	</view> -->
 	<!-- 轮播图 -->
 	<view class="swiper">
 		<swiper indicator-dots autoplay>
@@ -11,7 +19,7 @@
 		</swiper>
 		<view class="search">
 			<view class="city">
-				<text class="cityname">北京</text>
+				<text class="cityname">{{cityname}}</text>
 				<text class="iconfont icon-sj_bottom"></text>
 				<input placeholder="最大输入小区或地址" />
 			</view>
@@ -33,38 +41,38 @@
 			<text class="desc">{{it.text}}</text>
 		</view>
 	</view>
-  <!-- 租房小组 -->
-  <view class="group">
-    <view class="top">
-      <text class="title">租房小组</text>
-      <text class="more">更多</text>
-    </view>
-    <view class="groups">
-      <view class="item" wx:for="{{grouplist}}" wx:key="index">
-        <view class="left">
-          <text class="home">{{item.title}}</text>
-          <text class="feel">{{item.desc}}</text>
-        </view>
-        <view class="right">
-          <image src="{{baseUrl}}{{item.imgSrc}}"></image>
-        </view>
-      </view>
-    </view>
-  </view>
-  <!-- 最新资讯 -->
-  <view class="new">
-    <text class="top">最新资讯</text>
-    <view class="item" wx:for="{{newslist}}" wx:key="index">
-      <view class="left">
-        <image src="{{baseUrl}}{{item.imgSrc}}"></image>
-      </view>
-      <view class="right">
-        <view class="desc">{{item.title}}</view>
-        <view class="date">
-          <text class="name">{{item.from}}</text>
-          <text class="time">{{item.date}}</text>
-        </view>
-      </view>
-    </view>
-  </view>
+	<!-- 租房小组 -->
+	<view class="group">
+		<view class="top">
+			<text class="title">租房小组</text>
+			<text class="more">更多</text>
+		</view>
+		<view class="groups">
+			<view class="item" wx:for="{{grouplist}}" wx:key="index">
+				<view class="left">
+					<text class="home">{{item.title}}</text>
+					<text class="feel">{{item.desc}}</text>
+				</view>
+				<view class="right">
+					<image src="{{baseUrl}}{{item.imgSrc}}"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 最新资讯 -->
+	<view class="new">
+		<text class="top">最新资讯</text>
+		<view class="item" wx:for="{{newslist}}" wx:key="index">
+			<view class="left">
+				<image src="{{baseUrl}}{{item.imgSrc}}"></image>
+			</view>
+			<view class="right">
+				<view class="desc">{{item.title}}</view>
+				<view class="date">
+					<text class="name">{{item.from}}</text>
+					<text class="time">{{item.date}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
 </view>

@@ -1,4 +1,5 @@
 // 引用百度地图微信小程序JSAPI模块 
+import {Request} from '../static/request/index.js'
 let bmap = require('../libs/bmap-wx.js');
 let local = '';
 let city = ""

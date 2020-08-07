@@ -1,0 +1,44 @@
+<view class="citylist">
+	<view class="top">
+		<text class="iconfont icon-fenye-shangyiye"></text>
+		<text class="title">城市选择</text>
+	</view>
+	<view class="state" wx:for="{{10}}" wx:key="index">
+		<text class="stateitem">定位城市</text>
+		<view class="city">
+			<text class="cityitem">上海</text>
+			<text class="cityitem">深圳</text>
+		</view>
+	</view>
+	<view class="cityfirname">
+		<text class="topname">#</text>
+		<text>热</text>
+		<text>A</text>
+		<text>B</text>
+		<text>C</text>
+		<text>D</text>
+		<text>A</text>
+		<text>B</text>
+		<text>C</text>
+		<text>D</text>
+		<text>A</text>
+		<text>B</text>
+		<text>C</text>
+		<text>D</text>
+		<text>A</text>
+		<text>B</text>
+		<text>C</text>
+		<text>D</text>
+		<text>A</text>
+		<text>B</text>
+		<text>C</text>
+		<text>D</text>
+		<text>A</text>
+		<text>B</text>
+		<text>C</text>
+		<text>D</text>
+		<text>A</text>
+		<text>B</text>
+
+	</view>
+</view>

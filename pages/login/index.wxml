@@ -1,0 +1,13 @@
+<view class="login">
+  <view class="top">
+    <text class="iconfont icon-fenye-shangyiye"></text>
+    <text class="title">账号登录</text>
+  </view>
+  <view class="list">
+    <input placeholder="请输入用户名"/>
+    <input placeholder="请输入密码"/>
+  </view>
+  <view class="btn">
+    <text>登录</text>
+  </view>
+</view>

@@ -1,0 +1,64 @@
+.citylist {
+  width: 100%;
+  position: relative;
+}
+.citylist .top {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #f6f5f6;
+
+}
+.citylist .top .icon-fenye-shangyiye {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.citylist .top .title {
+  text-align: center;
+}
+.citylist .state {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.citylist .state .stateitem {
+  font-size: 13px;
+  color: #acacac;
+  line-height: 30px;
+
+}
+.citylist .state .city {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  color: #000;
+  line-height: 40px;
+}
+.citylist .state .city .cityitem {
+  border-bottom: 1px solid #eeeeee;
+}
+.citylist  .cityfirname {
+  position: fixed;
+  right: 5px;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+.citylist  .cityfirname text {
+  margin-top: 2px;
+}
+.citylist .cityfirname .topname {
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  background-color: pink;
+  border-radius: 50%;
+}

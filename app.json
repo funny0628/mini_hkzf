@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/findhouse/index",
     "pages/new/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/citylist/index",
+    "pages/login/index"
   ],
   "permission": {
     "scope.userLocation": {

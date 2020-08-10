@@ -1,6 +1,8 @@
 //index.js
 //获取城市名字
-import {getcityname,getcityvalue} from '../../utils/city.js'
+import {
+  getcityname,
+} from '../../utils/city.js'
 //获取应用实例
 const app = getApp()
 
@@ -36,29 +38,18 @@ Page({
     //地图数据
 
   },
-   onLoad: function (options) {
+  onLoad: function (options) {
     this.setData({
       baseUrl: wx.$baseurl
+    })
+    this.setData({
+      cityname: getcityname().label
     })
     this.getswiper();
     this.getgroup();
     this.getnews();
-    this.setData({
-      cityname:getcityname()
-    })
-    this.getcityvalue(this.data.cityname)
   },
-async getcityvalue(name){
- let {data} = await wx.$http({
-    url:"​/area​/info",
-    method:'GET',
-    data:{
-      name:name
-    }
-  })
-  console.log(data);
-  
-},
+
   //请求轮播图数据
   async getswiper() {
     wx.$showToast()
@@ -81,7 +72,7 @@ async getcityvalue(name){
     let {
       data
     } = await wx.$http({
-      url: '/home/groups',
+      url: `/home/groups/?area=${this.data.cityname}`,
       method: 'GET',
     })
     if (data.status === 200 && data.description === '请求成功') {
@@ -97,7 +88,7 @@ async getcityvalue(name){
     let {
       data
     } = await wx.$http({
-      url: '/home/news',
+      url: `/home/news?area=${this.data.cityname}`,
       method: 'GET',
     })
     if (data.status === 200 && data.description === '请求成功') {

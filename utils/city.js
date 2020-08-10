@@ -27,9 +27,18 @@ export function getcityname() {
       ak: 'x6QfgHjg6kdB0trGeIdu67Chzwxl2adT'
     });
 
-    let success = (data) => {
-      setname(data.currentWeather[0].currentCity)
-      city = data.currentWeather[0].currentCity
+    let success = async (res) => {
+      city = res.currentWeather[0].currentCity
+      let {data} = await Request({
+        url:'/area/info',
+        method:'GET',
+        data:{
+          name:city
+        }
+      })
+      if(data.status === 200 && data.description === '请求成功'){
+         setname(data.body)
+      }
     }
     let fail = function (data) {
       console.log(data);

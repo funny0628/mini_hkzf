@@ -53,7 +53,6 @@ Page({
     this.getswiper();
     this.getgroup();
     this.getnews();
-<<<<<<< HEAD
   },
   //跳转到城市列表页面
   tocitylist(query){
@@ -63,31 +62,6 @@ Page({
     })
   },
 
-=======
-    this.getcityvalue()
-    this.setData({
-      cityname: getcityname()
-    })
-  },
-  //由城市名获取城市信息
-  async getcityvalue() {
-    //bug来源于,复制的/area/info,源文本内部有不知名的字符
-    let {
-      data
-    } = await wx.$http({
-      url: "/area/info",
-      method: 'GET',
-      data: {
-        name: getcityname()
-      }
-    })
-    if (data.status === 200 && data.description === '请求成功') {
-      this.setData({
-        cityinfo: data.body
-      })
-    }
-  },
->>>>>>> 5a22ba8cea00536e108bd2efab2ae1e25a7c7aa5
   //请求轮播图数据
   async getswiper() {
     wx.$showToast()

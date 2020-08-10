@@ -1,4 +1,7 @@
-//index.js
+// //index.js
+// const dayjs = require('./miniprogram_npm/dayjs/index')
+// console.log(dayjs());
+
 //获取城市名字
 import {
   getcityname
@@ -44,32 +47,21 @@ Page({
     this.setData({
       baseUrl: wx.$baseurl
     })
+    this.setData({
+      cityname: getcityname().label
+    })
     this.getswiper();
     this.getgroup();
     this.getnews();
-    this.getcityvalue()
-    this.setData({
-      cityname: getcityname()
+  },
+  //跳转到城市列表页面
+  tocitylist(query){
+    let searchvalue = query.currentTarget.dataset.serchnme
+    wx.navigateTo({
+      url:`/pages/citylist/index?value=${searchvalue}`,
     })
   },
-  //由城市名获取城市信息
-  async getcityvalue() {
-    //bug来源于,复制的/area/info,源文本内部有不知名的字符
-    let {
-      data
-    } = await wx.$http({
-      url: "/area/info",
-      method: 'GET',
-      data: {
-        name: getcityname()
-      }
-    })
-    if (data.status === 200 && data.description === '请求成功') {
-      this.setData({
-        cityinfo: data.body
-      })
-    }
-  },
+
   //请求轮播图数据
   async getswiper() {
     wx.$showToast()
@@ -92,7 +84,7 @@ Page({
     let {
       data
     } = await wx.$http({
-      url: '/home/groups',
+      url: `/home/groups/?area=${this.data.cityname}`,
       method: 'GET',
     })
     if (data.status === 200 && data.description === '请求成功') {
@@ -108,7 +100,7 @@ Page({
     let {
       data
     } = await wx.$http({
-      url: '/home/news',
+      url: `/home/news?area=${this.data.cityname}`,
       method: 'GET',
     })
     if (data.status === 200 && data.description === '请求成功') {

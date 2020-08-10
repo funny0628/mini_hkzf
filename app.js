@@ -1,4 +1,6 @@
 //app.js
+// import dayjs from 'dayjs'
+// console.log(dayjs(),"----");
 import {Request,showtoast,hidetoast} from './static/request/index.js'
 import {BASEURL} from './utils/city.js'
 wx.$http = Request

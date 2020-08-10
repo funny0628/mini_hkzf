@@ -1,6 +1,7 @@
 .citylist {
   width: 100%;
   position: relative;
+  padding-top: 50px;
 }
 .citylist .top {
   width: 100%;
@@ -8,7 +9,8 @@
   line-height: 50px;
   display: flex;
   justify-content: center;
-  position: relative;
+  position: fixed;
+  top: 0;
   background-color: #f6f5f6;
 
 }
@@ -25,12 +27,12 @@
   width: 100%;
   padding: 0 10px;
   box-sizing: border-box;
+  
 }
 .citylist .state .stateitem {
   font-size: 13px;
   color: #acacac;
   line-height: 30px;
-
 }
 .citylist .state .city {
   display: flex;

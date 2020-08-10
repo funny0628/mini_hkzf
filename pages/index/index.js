@@ -4,7 +4,8 @@
 
 //获取城市名字
 import {
-  getcityname
+  getcityname,
+  getname
 } from '../../utils/city.js'
 //获取应用实例
 const app = getApp()

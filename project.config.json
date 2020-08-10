@@ -12,7 +12,7 @@
 		"minified": true,
 		"newFeature": false,
 		"coverView": true,
-		"nodeModules": false,
+		"nodeModules": true,
 		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
@@ -98,6 +98,13 @@
 					"name": "pages/citylist/index",
 					"pathName": "pages/citylist/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/citylist/index",
+					"pathName": "pages/citylist/index",
+					"query": "serchnme=深圳",
 					"scene": null
 				},
 				{

@@ -15,7 +15,9 @@ Page({
     //城市列表
     yijicity: [],
     currentcity: '',
-    allcitylist: {}
+    allcitylist: {},
+    //初始下标
+    activeindex:0,
   },
 
   /**
@@ -25,10 +27,10 @@ Page({
     this.setData({
       currentcity: options.serchnme
     })
-    console.log(options);
     this.gethotlist()
     this.getyijilist();
   },
+  //获取热门城市
   async gethotlist() {
     let {
       data
@@ -42,6 +44,7 @@ Page({
       })
     }
   },
+  //获取城市列表
   async getyijilist() {
     let {
       data
@@ -70,35 +73,56 @@ Page({
     let allcityobj = {}
     let oldlist = this.data.maoidan
     for (let i = 0; i < oldlist.length; i++) {
-      // let allcityobjitem = {
-      //   title: '',
-      //   children: []
-      // };
-      // let obj = {};
       let key = oldlist[i]
-      console.log(oldlist[i]);
-      allcityobj[key]  = []
+      allcityobj[key] = []
       for (let j = 0; j < newyijicity.length; j++) {
         if (oldlist[i] === newyijicity[j].firstcode) {
           allcityobj[key].push(newyijicity[j].label)
+        }
       }
     }
-  }
     this.data.hotcity.map((item) => {
       allcityobj['热'].push(item.label)
     })
     allcityobj['#'].push(this.data.currentcity)
     let citylistarr = []
-  Object.keys(allcityobj).map((item,index)=>{
-    citylistarr.push({
-      title:item,
-      children:allcityobj[item]
+    Object.keys(allcityobj).map((item, index) => {
+      citylistarr.push({
+        title: item,
+        children: allcityobj[item]
+      })
     })
-  })
-  console.log(citylistarr);
     this.setData({
       allcitylist: citylistarr
     })
+  },
+  
+  //点击每一个城市
+  clickItem(query){
+    let currentKey = query.currentTarget.dataset.key
+    //修改右侧背景颜色
+    this.data.maoidan.map((item,index)=>{
+      if(currentKey === item){
+        this.setData({
+          activeindex:index
+        })
+      }
+    })
+    //修改左侧当前项在最顶部
+
+    
+    
+  },
+  
+  //点击城市首字母
+  clicktabfirst(query){
+    let firstvalue = query.currentTarget.dataset.value
+    let firstKey = query.currentTarget.dataset.key
+    console.log(firstvalue,firstKey);
+    this.setData({
+      activeindex : firstKey
+    })
+    
   },
 
 

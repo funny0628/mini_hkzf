@@ -1,7 +1,10 @@
 // 封装自己的小程序请求方法
 import {gettoken,removetoken} from '../../utils/token.js'
+import {BASEURL} from '../../utils/city.js'
 export function Request(options) {
-  let baseURl = options.baseurl || 'http://huangjiangjun.top:8088'
+  console.log("-----fasongqingqiu ");
+  
+  let baseURl = options.baseurl || BASEURL
   return new Promise((reslove, reject) => {
     wx.request({
       url: baseURl + options.url,
@@ -26,7 +29,7 @@ export function Request(options) {
         reslove(res)
       },
       fail(error) {
-        // console.log(error);
+        console.log(error);
         reject(error)
       }
     })

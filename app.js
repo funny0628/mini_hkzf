@@ -2,14 +2,15 @@
 // import dayjs from 'dayjs'
 // console.log(dayjs(),"----");
 import {Request,showtoast,hidetoast} from './static/request/index.js'
+import {BASEURL} from './utils/city.js'
 wx.$http = Request
 wx.$showToast = showtoast
 wx.$hideToast = hidetoast
-wx.$baseurl = 'http://huangjiangjun.top:8088'
+wx.$baseurl = BASEURL
 App({
   
   onLaunch: function () {
-    wx.$baseurl = 'http://huangjiangjun.top:8088'
+    // wx.$baseurl = 'http://huangjiangjun.top:8088'
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

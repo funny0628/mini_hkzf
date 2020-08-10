@@ -17,7 +17,7 @@
 		"uglifyFileName": false,
 		"uploadWithSourceMap": true,
 		"useIsolateContext": true,
-		"nodeModules": true,
+		"nodeModules": false,
 		"enhance": false,
 		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false,

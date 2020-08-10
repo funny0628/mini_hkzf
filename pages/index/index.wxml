@@ -1,13 +1,13 @@
 <!--index.wxml-->
 <view class="container">
-	<!-- <view class="map_container">
-		<map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
-	</view>
-	<view class="rgc_info">
-		<text>{{rgcData.address}}</text>
-		<text>{{rgcData.desc}}</text>
-		<text>{{rgcData.business}}</text>
-	</view> -->
+<!-- <view style="width:100%;height:300px">
+<datepicker value="{{solar}}" bindchange="bindSolarChange">
+    <button type="default">公历</button>
+</datepicker>
+<datepicker value="{{lunar}}" chinese="{{true}}" bindchange="bindLunarChange">
+    <button type="default" class="weui-btn">农历</button>
+</datepicker>
+</view> -->
 	<!-- 轮播图 -->
 	<view class="swiper">
 		<swiper indicator-dots autoplay>
@@ -19,8 +19,8 @@
 		</swiper>
 		<view class="search">
 			<view class="city">
-				<text class="cityname">{{cityname}}</text>
-				<text class="iconfont icon-sj_bottom"></text>
+				<text bindtap="tocitylist" data-serchnme="{{cityname}}" class="cityname">{{cityname}}</text>
+				<text bindtap="tocitylist" data-serchnme="{{cityname}}"  class="iconfont icon-sj_bottom"></text>
 				<input placeholder="最大输入小区或地址" />
 			</view>
 			<view class="ditu">

@@ -1,4 +1,6 @@
 //app.js
+// import dayjs from 'dayjs'
+// console.log(dayjs(),"----");
 import {Request,showtoast,hidetoast} from './static/request/index.js'
 wx.$http = Request
 wx.$showToast = showtoast

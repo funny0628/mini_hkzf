@@ -1,4 +1,7 @@
-//index.js
+// //index.js
+// const dayjs = require('./miniprogram_npm/dayjs/index')
+// console.log(dayjs());
+
 //获取城市名字
 import {
   getcityname,
@@ -48,6 +51,13 @@ Page({
     this.getswiper();
     this.getgroup();
     this.getnews();
+  },
+  //跳转到城市列表页面
+  tocitylist(query){
+    let searchvalue = query.currentTarget.dataset.serchnme
+    wx.navigateTo({
+      url:`/pages/citylist/index?value=${searchvalue}`,
+    })
   },
 
   //请求轮播图数据

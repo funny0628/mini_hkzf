@@ -1,16 +1,15 @@
 .citylist {
   width: 100%;
-  position: relative;
+  height: 100vh;
 }
 .citylist .top {
   width: 100%;
-  height: 50px;
+  height: 8vh;
   line-height: 50px;
   display: flex;
   justify-content: center;
-  position: relative;
   background-color: #f6f5f6;
-
+  position: relative;
 }
 .citylist .top .icon-fenye-shangyiye {
   position: absolute;
@@ -21,6 +20,9 @@
 .citylist .top .title {
   text-align: center;
 }
+.citylist .list {
+  height: 92vh;
+}
 .citylist .state {
   width: 100%;
   padding: 0 10px;
@@ -30,7 +32,6 @@
   font-size: 13px;
   color: #acacac;
   line-height: 30px;
-
 }
 .citylist .state .city {
   display: flex;
@@ -59,6 +60,7 @@
   height: 15px;
   line-height: 15px;
   text-align: center;
-  background-color: pink;
+  background-color:#18b574;
   border-radius: 50%;
+  color: #fff;
 }

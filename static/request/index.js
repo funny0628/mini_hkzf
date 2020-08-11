@@ -2,8 +2,6 @@
 import {gettoken,removetoken} from '../../utils/token.js'
 import {BASEURL} from '../../utils/city.js'
 export function Request(options) {
-  console.log("-----fasongqingqiu ");
-  
   let baseURl = options.baseurl || BASEURL
   return new Promise((reslove, reject) => {
     wx.request({

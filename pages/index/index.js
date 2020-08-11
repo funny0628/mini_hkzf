@@ -1,10 +1,11 @@
 // //index.js
 // const dayjs = require('./miniprogram_npm/dayjs/index')
 // console.log(dayjs());
+console.log("-----1-----");
 
 //获取城市名字
 import {
-  getcityname
+  getcityname,
 } from '../../utils/city.js'
 //获取应用实例
 const app = getApp()
@@ -44,6 +45,7 @@ Page({
 
   },
   onLoad: function (options) {
+    console.log("-----onload-----");
     this.setData({
       baseUrl: wx.$baseurl
     })
@@ -53,6 +55,11 @@ Page({
     this.getswiper();
     this.getgroup();
     this.getnews();
+  },
+  onShow(){
+    this.setData({
+      cityname: getcityname().label
+    })
   },
   //跳转到城市列表页面
   tocitylist(query){
